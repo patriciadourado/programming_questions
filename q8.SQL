@@ -1,0 +1,26 @@
+/* CREATE TABLES IN DATABSE */
+
+CREATE TABLE IF NOT EXISTS "dogs" ( 
+	id INTEGER NOT NULL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "cats" ( 
+	id INTEGER NOT NULL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+);
+
+/* POPULATE DATABASE TABLES */
+
+INSERT INTO cats (name) VALUES ("Steve"); 
+INSERT INTO cats (name) VALUES ("Carl"); 
+INSERT INTO cats (name) VALUES ("Neil"); 
+
+INSERT INTO dogs (name) VALUES ("Walter");
+INSERT INTO dogs (name) VALUES ("Jesse");
+INSERT INTO dogs (name) VALUES ("Skyler");
+
+/* QUERY THE DESIRED SELECTION */
+
+SELECT DISTINCT name from dogs 
+UNION SELECT DISTINCT name from cats
